@@ -27,6 +27,7 @@ public class RaceCar {
 		this.positionInRace = positionInRace;
 	}
 	
+
 	public int getPositionInRace() {
 		return this.positionInRace;
 	}
