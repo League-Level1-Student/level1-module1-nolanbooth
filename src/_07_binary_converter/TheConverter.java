@@ -9,7 +9,7 @@ public class TheConverter {
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
 	JButton button = new JButton();
-	JTextField field  = new JTextField();
+	JTextField field  = new JTextField(20);
 	
 	
 	
