@@ -1,14 +1,39 @@
 package _07_binary_converter;
 import javax.swing.JOptionPane;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
-public class TheConverter {
+public class TheConverter implements ActionListener {
 //:D
 
 
+	
+	JFrame frame = new JFrame();
+	JPanel panel = new JPanel();
+	JButton button = new JButton();
+	JTextField field = new JTextField(20);
+	JLabel label = new JLabel();
+	
+	public void createUI() {
+		frame.setVisible(true);
+		frame.add(panel);
+		panel.add(button);
+		panel.add(field);
+		panel.add(label);
+		frame.setSize(500,80);
+	button.setText("CONVERT");
+	button.addActionListener(this);
+	
+	
+	}
+	
+	
 	
 	
 	
@@ -32,6 +57,30 @@ public class TheConverter {
 	        JOptionPane.showMessageDialog(null, "Enter a binary, silly!!!");
 	        return "-";
 	    }
+	}
+
+
+
+
+
+
+
+	@Override
+	public void actionPerformed(ActionEvent event) {
+		// TODO Auto-generated method stub
+String input = field.getText();
+				if(event.getSource() == button) {
+					
+					String output = convert(input);
+				label.setText(output);
+				}
+				
+			
+		
+		
+		
+		
+		
 	}
 
 
